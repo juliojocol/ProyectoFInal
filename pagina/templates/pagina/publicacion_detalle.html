@@ -1,0 +1,21 @@
+{% extends 'pagina/base.html' %}
+
+{% block content %}
+    <div class="post">
+        {% if publicacion.fecha_publicacion %}
+            <div class="date">
+                <p>publicado: {{ publicacion.fecha_publicacion }}</p>
+            </div>
+        {% else %}
+            <a class="button is-primary" href="{% url 'publicacion_publicar' pk=publicacion.pk %}"><span class="fa fa-check"></span></a>
+        {% endif %}
+        <a class="button is-info" href="{% url 'publicacion_editar' pk=publicacion.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        <a class="button is-danger" href="{% url 'publicacion_eliminar' pk=publicacion.pk %}"><span class="fa fa-eraser"></span></a>
+        <h4 class="title is-1" >
+                {{publicacion.producto}}
+            
+        </h4>
+        <div class="content">{{ publicacion.descripcion|linebreaksbr }}</div>
+        <h6> {{publicacion.precio | linebreaksbr }} </h6>
+    </div>
+{% endblock %}
