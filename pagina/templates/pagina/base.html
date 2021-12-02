@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Publicaciones con Bulma!</title>
+    <title>Proyecto Final Programacion Comercial</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
@@ -32,15 +32,15 @@
             <div id="navbarMenuHeroA" class="navbar-menu">
             <div class="navbar-end">
                 <a class="navbar-item" href="http://127.0.0.1:8000/">
-                Home
+                    Home
+                    </a>
+                    <a class="navbar-item" href="{% url 'publicacion_nueva' %}">
+                    Nuevo
+                    </a>
+                    <a class="navbar-item" href="{% url 'publicacion_borrador_lista' %}">
+                      Borradores
+                    </a>
                 </a>
-                <a class="navbar-item" href="">
-                Nuevo
-                </a>
-                <a class="navbar-item" href="">
-                  Borradores
-                  </a>
-
             </div>
             </div>
         </div>
@@ -51,28 +51,12 @@
       <div class="hero-body">
           <div class="container has-text-centered">
           <p class="title">
-              Publicaciones con Bulma
+              Proyecto Libreria
           </p>
           <p class="subtitle">
-              Django
+              Desarrollado en Django
           </p>
           </div>
-      </div>
-
-      <!-- Hero footer: will stick at the bottom -->
-      <div class="hero-foot">
-          <nav class="tabs">
-          <div class="container">
-              <ul>
-              <li class="is-active"><a>Overview</a></li>
-              <li><a>Modifiers</a></li>
-              <li><a>Grid</a></li>
-              <li><a>Elements</a></li>
-              <li><a>Components</a></li>
-              <li><a>Layout</a></li>
-              </ul>
-          </div>
-          </nav>
       </div>
       </section>
 

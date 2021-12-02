@@ -1,0 +1,18 @@
+{% extends 'pagina/base.html' %}
+
+{% block content %}
+    {% for publicacion in publicaciones %}
+        <div class="box">
+            <div class="notification is-link-is-light">
+                publicado: {{ publicacion.autor }}
+            </div>
+            <h4 class="title is-1" >
+                <a href="{% url 'publicacion_detalle' pk=publicacion.pk %}">
+                    {{publicacion.producto}}
+                </a>
+            </h4>
+            <div class="content">{{ publicacion.descripcion|linebreaksbr }}</div>
+            <h6> {{publicacion.precio | linebreaksbr }} </h6>
+        </div>
+    {% endfor %}
+{% endblock %} 
